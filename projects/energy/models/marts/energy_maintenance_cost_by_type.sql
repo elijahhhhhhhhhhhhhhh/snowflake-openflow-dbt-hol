@@ -41,7 +41,7 @@ aggregated as (
         sum(case when is_at_risk then 1 else 0 end) as at_risk_event_count
 
     from logs
-    group by maintenance_type
+    group by maintenance_type, maintenance_status
 
 )
 
