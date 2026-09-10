@@ -25,13 +25,15 @@ models:
         data_tests:
           - not_null
 
-      # HOL_BUG_ENERGY_04
         dimension:
           type: time
         granularity: day
-      - name: commodity
+      - name: commodity_code
         data_type: varchar
         description: Machine-readable commodity code, for example brent_crude.
+
+        dimension:
+          type: categorical
 
       - name: commodity_name
         data_type: varchar
